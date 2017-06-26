@@ -4,6 +4,10 @@ using namespace std;
 #include<string.h>
 #include<stdlib.h>
 
+
+
+
+
 #define n 100//叶节点的个数小于等于n
 #define m 2*n-1//总结点的个数为m=2*n-1
 int num;//定义一个全局变量用于存放字符种类个数
