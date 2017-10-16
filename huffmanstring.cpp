@@ -1,3 +1,4 @@
+// newer
 #include<iostream>
 using namespace std;
 #include<stdio.h>
@@ -8,12 +9,12 @@ using namespace std;
 
 
 
-#define n 100//叶节点的个数小于等于n
-#define m 2*n-1//总结点的个数为m=2*n-1
-int num;//定义一个全局变量用于存放字符种类个数
+#define n 100//叶锟节碉拷锟侥革拷锟斤拷小锟节碉拷锟斤拷n
+#define m 2*n-1//锟杰斤拷锟斤拷锟侥革拷锟斤拷为m=2*n-1
+int num;//锟斤拷锟斤拷一锟斤拷全锟街憋拷锟斤拷锟斤拷锟节达拷锟斤拷锟街凤拷锟斤拷锟斤拷锟斤拷锟斤拷
 
 typedef struct
-//结构体用于存放树节点包括节点的父节点、左子节点、右子节点以及权值
+//锟结构锟斤拷锟斤拷锟节达拷锟斤拷锟斤拷锟节碉拷锟斤拷锟斤拷锟节碉拷锟侥革拷锟节点、锟斤拷锟接节点、锟斤拷锟接节碉拷锟皆硷拷权值
 {
 	int weight;
 	int parent;
@@ -22,9 +23,9 @@ typedef struct
 }HTNode;
 
 
-typedef HTNode HafumanTree[m+1];//重命名HTNode  HT
+typedef HTNode HafumanTree[m+1];//锟斤拷锟斤拷锟斤拷HTNode  HT
 
-typedef struct//结构体用于存放每个字符的密文和长度
+typedef struct//锟结构锟斤拷锟斤拷锟节达拷锟斤拷每锟斤拷锟街凤拷锟斤拷锟斤拷锟侥和筹拷锟斤拷
 {
 	char ch;
 	char bits[10];
@@ -36,14 +37,14 @@ typedef CodeNode HafumanCode[n+1];
 
 int main(int argc,char*argv[])
 {
-	int quan[27],k=1,length,count=1,total,method;//申明一个数组用以存放26个字符的权值，length表示要加密字符串的长度
-	                                             //count用于控制输入字符和权值的次数，total用于循环控制，k用于控制解密、加密
-		                                         //method用于控制使用各种方法进行输入权值
-	char getstr[300],str[27];//申明两个字符串数组一个用于存输入，一个用于存放，输入中含有字符
-	char*s;//申明一个char型指针用于指向字符HafumanTree HT;
-	HafumanCode HC;//申明m+1个树节点
-	HafumanTree HT;//声明n+1个code
-	int counttotal(char*s,int quan[],char str[]);//声明需要调用的函数
+	int quan[27],k=1,length,count=1,total,method;//锟斤拷锟斤拷一锟斤拷锟斤拷锟斤拷锟斤拷锟皆达拷锟斤拷26锟斤拷锟街凤拷锟斤拷权值锟斤拷length锟斤拷示要锟斤拷锟斤拷锟街凤拷锟斤拷锟侥筹拷锟斤拷
+	                                             //count锟斤拷锟节匡拷锟斤拷锟斤拷锟斤拷锟街凤拷锟斤拷权值锟侥达拷锟斤拷锟斤拷total锟斤拷锟斤拷循锟斤拷锟斤拷锟狡ｏ拷k锟斤拷锟节匡拷锟狡斤拷锟杰★拷锟斤拷锟斤拷
+		                                         //method锟斤拷锟节匡拷锟斤拷使锟矫革拷锟街凤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷权值
+	char getstr[300],str[27];//锟斤拷锟斤拷锟斤拷锟斤拷锟街凤拷锟斤拷锟斤拷锟斤拷一锟斤拷锟斤拷锟节达拷锟斤拷锟诫，一锟斤拷锟斤拷锟节达拷锟脚ｏ拷锟斤拷锟斤拷锟叫猴拷锟斤拷锟街凤拷
+	char*s;//锟斤拷锟斤拷一锟斤拷char锟斤拷指锟斤拷锟斤拷锟斤拷指锟斤拷锟街凤拷HafumanTree HT;
+	HafumanCode HC;//锟斤拷锟斤拷m+1锟斤拷锟斤拷锟节碉拷
+	HafumanTree HT;//锟斤拷锟斤拷n+1锟斤拷code
+	int counttotal(char*s,int quan[],char str[]);//锟斤拷锟斤拷锟斤拷要锟斤拷锟矫的猴拷锟斤拷
 	void creathafumantree(HafumanTree HT,HafumanCode HC,int quan[],char str[]);
 	void Hafumanencode(HafumanTree HT,HafumanCode HC);
 	void codenum(HafumanCode HC,char*str);
@@ -54,53 +55,53 @@ int main(int argc,char*argv[])
 	while(k)
 	{
 		printf("                        ******************************                                \n");
-		printf("                         欢迎使用哈夫曼加密解密系统!                                  \n");
+		printf("                         锟斤拷迎使锟矫癸拷锟斤拷锟斤拷锟斤拷锟杰斤拷锟斤拷系统!                                  \n");
 		printf("                        ******************************                                \n");
-		printf("请输入获得权值的方法,输入1表示输入每个节点的权值,输入0表示将每个字符在输入字符串中出现的次数作为其权值:");
+		printf("锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷权值锟侥凤拷锟斤拷,锟斤拷锟斤拷1锟斤拷示锟斤拷锟斤拷每锟斤拷锟节碉拷锟斤拷权值,锟斤拷锟斤拷0锟斤拷示锟斤拷每锟斤拷锟街凤拷锟斤拷锟斤拷锟斤拷锟街凤拷锟斤拷锟叫筹拷锟街的达拷锟斤拷锟斤拷为锟斤拷权值:");
 			scanf("%d",&method);
 		if(method==0)
 		{
-		    printf("请输入要编码的字符串(请输入小写字母): ");
+		    printf("锟斤拷锟斤拷锟斤拷要锟斤拷锟斤拷锟斤拷锟街凤拷锟斤拷(锟斤拷锟斤拷锟斤拷小写锟斤拷母): ");
 		    gets(getstr);
-		    scanf("%S",&getstr);//获得输入的字符串
-		    num=counttotal(getstr,quan,str);//统计字符串中含有字符种类个数
-		    creathafumantree(HT,HC,quan,str);//根据字符权值构建哈夫曼树
-		    Hafumanencode(HT,HC);//根据哈夫曼树确定每个字符的code
-		    codenum(HC,getstr);//将字符串译码存入文件夹
-		    s=decode(HC);//将暗文解码
-		    printf("解密为: \n");
+		    scanf("%S",&getstr);//锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟街凤拷锟斤拷
+		    num=counttotal(getstr,quan,str);//统锟斤拷锟街凤拷锟斤拷锟叫猴拷锟斤拷锟街凤拷锟斤拷锟斤拷锟斤拷锟斤拷
+		    creathafumantree(HT,HC,quan,str);//锟斤拷锟斤拷锟街凤拷权值锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷
+		    Hafumanencode(HT,HC);//锟斤拷锟捷癸拷锟斤拷锟斤拷锟斤拷确锟斤拷每锟斤拷锟街凤拷锟斤拷code
+		    codenum(HC,getstr);//锟斤拷锟街凤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟侥硷拷锟斤拷
+		    s=decode(HC);//锟斤拷锟斤拷锟侥斤拷锟斤拷
+		    printf("锟斤拷锟斤拷为: \n");
 		    printf("%s\n",&s);
-		    printf("是否想继续编码、解码,是输入1回车,否输入0回车: ");
+		    printf("锟角凤拷锟斤拷锟斤拷锟斤拷锟斤拷锟诫、锟斤拷锟斤拷,锟斤拷锟斤拷锟斤拷1锟截筹拷,锟斤拷锟斤拷锟斤拷0锟截筹拷: ");
 		    scanf("%d",&k);
 
 		}
 		else if(method==1)
         {
-            total=1;//每次都要将其清零，以达到控制循环的效果
+            total=1;//每锟轿讹拷要锟斤拷锟斤拷锟斤拷锟姐，锟皆达到锟斤拷锟斤拷循锟斤拷锟斤拷效锟斤拷
             scanf("%d",&length);
             for(count=1;count<=length;count++)
             {
-                printf("请输入第%d个字符和该字符的权值(中间留一个空格): ");
+                printf("锟斤拷锟斤拷锟斤拷锟斤拷%d锟斤拷锟街凤拷锟酵革拷锟街凤拷锟斤拷权值(锟叫硷拷锟斤拷一锟斤拷锟秸革拷): ");
                 cin>>str[total]>>quan[total];
                 total++;
             }
             num=length;
-            creathafumantree(HT,HC,quan,str);//根据字符权值构建哈夫曼树
-            Hafumanencode(HT,HC);//根据哈夫曼树确定每个字符的code
-            printf("请输入要编码的字符串: ");
+            creathafumantree(HT,HC,quan,str);//锟斤拷锟斤拷锟街凤拷权值锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷
+            Hafumanencode(HT,HC);//锟斤拷锟捷癸拷锟斤拷锟斤拷锟斤拷确锟斤拷每锟斤拷锟街凤拷锟斤拷code
+            printf("锟斤拷锟斤拷锟斤拷要锟斤拷锟斤拷锟斤拷锟街凤拷锟斤拷: ");
             cin>>getstr;
 
-            codenum(HC,getstr);//将字符串译码存入文件夹
+            codenum(HC,getstr);//锟斤拷锟街凤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟侥硷拷锟斤拷
             s=decode(HC);
-            printf("解密为: \n");
+            printf("锟斤拷锟斤拷为: \n");
             printf("%s\n",&s);
-            printf("是否想继续编码、解码,是输入1回车,否输入0回车: \n");
+            printf("锟角凤拷锟斤拷锟斤拷锟斤拷锟斤拷锟诫、锟斤拷锟斤拷,锟斤拷锟斤拷锟斤拷1锟截筹拷,锟斤拷锟斤拷锟斤拷0锟截筹拷: \n");
             scanf("%d",&k);
 
         }
         else
         {
-            printf("错误输入!\n");
+            printf("锟斤拷锟斤拷锟斤拷锟斤拷!\n");
             exit(0);
 
         }
@@ -111,19 +112,19 @@ int main(int argc,char*argv[])
 
 
 
-int counttotal(char*s,int quan[],char str[])//计算字符串中字符权值
+int counttotal(char*s,int quan[],char str[])//锟斤拷锟斤拷锟街凤拷锟斤拷锟斤拷锟街凤拷权值
 {
     char*p;
     int i,j,k,quantemp[27];
-    for(i=1;i<27;i++)//将所有字符的权值赋成0
+    for(i=1;i<27;i++)//锟斤拷锟斤拷锟斤拷锟街凤拷锟斤拷权值锟斤拷锟斤拷0
         quantemp[i]=0;
-    for(p=s;*p!='\0';p++)//判断字符串是否结束
+    for(p=s;*p!='\0';p++)//锟叫讹拷锟街凤拷锟斤拷锟角凤拷锟斤拷锟斤拷
 
 
-        if(*p>'a'&&*p<='z')//判断字符是否为26字母
+        if(*p>'a'&&*p<='z')//锟叫讹拷锟街凤拷锟角凤拷为26锟斤拷母
         {
-            k=*p-96;//看是26个字符中的哪个字符
-            quantemp[k]++;//字符权值加1
+            k=*p-96;//锟斤拷锟斤拷26锟斤拷锟街凤拷锟叫碉拷锟侥革拷锟街凤拷
+            quantemp[k]++;//锟街凤拷权值锟斤拷1
 
         }
         j=0;
@@ -131,13 +132,13 @@ int counttotal(char*s,int quan[],char str[])//计算字符串中字符权值
         {
             if(quantemp[i]!=0)
             {
-                j++;//用于统计字符种类个数
-                str[j]=i+96;//str按字母表顺序存储出现过的字符
+                j++;//锟斤拷锟斤拷统锟斤拷锟街凤拷锟斤拷锟斤拷锟斤拷锟斤拷
+                str[j]=i+96;//str锟斤拷锟斤拷母锟斤拷顺锟斤拷锟芥储锟斤拷锟街癸拷锟斤拷锟街凤拷
                 quan[j]=quantemp[i];
 
             }
         }
-        return j;//返回该数据给num赋值
+        return j;//锟斤拷锟截革拷锟斤拷锟捷革拷num锟斤拷值
 
 
 }
@@ -145,11 +146,11 @@ int counttotal(char*s,int quan[],char str[])//计算字符串中字符权值
 
 
 
-void selectmin(HafumanTree HT,int k,int *s1,int *s2)//选择权值最小的两个
+void selectmin(HafumanTree HT,int k,int *s1,int *s2)//选锟斤拷权值锟斤拷小锟斤拷锟斤拷锟斤拷
 {
     int i,j;
-    int min=9999;//声明一个int类型的数值min，赋个较大的输给它
-    for(i=1;i<=k;i++);//选择权值最小的一个节点（且该节点无父节点）
+    int min=9999;//锟斤拷锟斤拷一锟斤拷int锟斤拷锟酵碉拷锟斤拷值min锟斤拷锟斤拷锟斤拷锟较达拷锟斤拷锟斤拷锟斤拷锟斤拷
+    for(i=1;i<=k;i++);//选锟斤拷权值锟斤拷小锟斤拷一锟斤拷锟节点（锟揭该节碉拷锟睫革拷锟节点）
     {
         if(HT[i].weight<min&&(HT[i].parent==0))
         {
@@ -161,7 +162,7 @@ void selectmin(HafumanTree HT,int k,int *s1,int *s2)//选择权值最小的两个
     min=9999;
     for(i=1;i<=k;i++)
     {
-        if((HT[i].weight<min)&&(HT[i].parent==0)&&(i!=*s1))//选择权值最小的一个节点（且该节点无父节点）
+        if((HT[i].weight<min)&&(HT[i].parent==0)&&(i!=*s1))//选锟斤拷权值锟斤拷小锟斤拷一锟斤拷锟节点（锟揭该节碉拷锟睫革拷锟节点）
         {
             j=i;
             min=HT[i].weight;
@@ -172,22 +173,22 @@ void selectmin(HafumanTree HT,int k,int *s1,int *s2)//选择权值最小的两个
     *s2=j;
 }
 
-//构建哈夫曼树
+//锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷
 
 
 void creathafumantree(HafumanTree HT,HafumanCode HC,int quan[],char str[])
 {
     int i,s1,s2;
-    for(i=1;i<2*num-1;i++)//将所有的节点赋空
+    for(i=1;i<2*num-1;i++)//锟斤拷锟斤拷锟叫的节点赋锟斤拷
     {
         HT[i].lchild=0;HT[i].rchild=0;
         HT[i].parent=0;HT[i].weight=0;
     }
-    for(i=1;i<=num;i++)//将num个字符的权值9赋给num叶节点
+    for(i=1;i<=num;i++)//锟斤拷num锟斤拷锟街凤拷锟斤拷权值9锟斤拷锟斤拷num叶锟节碉拷
     {
         HT[i].weight=quan[i];
     }
-    for(i=1;i<=num;i++)//将num个字符赋给codenode
+    for(i=1;i<=num;i++)//锟斤拷num锟斤拷锟街凤拷锟斤拷锟斤拷codenode
     {
         HC[i].ch=str[i];
 
@@ -195,18 +196,18 @@ void creathafumantree(HafumanTree HT,HafumanCode HC,int quan[],char str[])
     i=1;
     while(i<=num)
         {
-            printf("字符为%c,权值为%d\n",HC[i].ch,quan[i]);
+            printf("锟街凤拷为%c,权值为%d\n",HC[i].ch,quan[i]);
             i++;
-        }//输出每个字符及权值
+        }//锟斤拷锟斤拷每锟斤拷锟街凤拷锟斤拷权值
         for(i=num+1;i<=2*num-1;i++)
         {
             selectmin(HT,i-1,&s1,&s2);
-            //选择两个权值最小的叶节点，分别存放于s1和s2
+            //选锟斤拷锟斤拷锟斤拷权值锟斤拷小锟斤拷叶锟节点，锟街憋拷锟斤拷锟斤拷锟斤拷s1锟斤拷s2
             HT[s1].parent=i;
-            HT[s2].parent=i;//两个节点指向同一个父节点
+            HT[s2].parent=i;//锟斤拷锟斤拷锟节碉拷指锟斤拷同一锟斤拷锟斤拷锟节碉拷
             HT[i].lchild=s1;HT[i].rchild=s2;
             HT[i].weight=HT[s1].weight+HT[s2].weight;
-            //父节点的权值为子节点相加（父节点继续放入选择区）
+            //锟斤拷锟节碉拷锟斤拷权值为锟接节碉拷锟斤拷锟接ｏ拷锟斤拷锟节碉拷锟斤拷锟斤拷锟斤拷锟斤拷选锟斤拷锟斤拷锟斤拷
 
         }
 
@@ -219,44 +220,44 @@ void creathafumantree(HafumanTree HT,HafumanCode HC,int quan[],char str[])
 void Hafumanencode(HafumanTree HT,HafumanCode HC)
 {
     int c,p,i;
-    char cd[n];//临时数组用于记录字符在哈夫曼树的位置
+    char cd[n];//锟斤拷时锟斤拷锟斤拷锟斤拷锟节硷拷录锟街凤拷锟节癸拷锟斤拷锟斤拷锟斤拷锟斤拷位锟斤拷
     int start;
-    cd[num]='\0';//给cd赋个结束符
+    cd[num]='\0';//锟斤拷cd锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷
     for(i=1;i<=num;i++)
     {
         start=num;
         c=i;
         while((p=HT[c].parent)>0)
-            //根据节点是其父节点的左右子来记录他的位置
+            //锟斤拷锟捷节碉拷锟斤拷锟戒父锟节碉拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷录锟斤拷锟斤拷位锟斤拷
         {
             cd[--start]=(HT[p].lchild==c)?'0':'1';
-            c=p;//将父节点转为子节点
+            c=p;//锟斤拷锟斤拷锟节碉拷转为锟接节碉拷
         }
-        strcpy(HC[i].bits,&cd[start]);//将得到的0、1字串存入结构体HC
+        strcpy(HC[i].bits,&cd[start]);//锟斤拷锟矫碉拷锟斤拷0锟斤拷1锟街达拷锟斤拷锟斤拷锟结构锟斤拷HC
         printf("%c:%s\n",HC[i].ch,HC[i].bits);
-        HC[i].len=num-start;//求每个字符0、1编码长度
+        HC[i].len=num-start;//锟斤拷每锟斤拷锟街凤拷0锟斤拷1锟斤拷锟诫长锟斤拷
     }
 
 }
 
-//根据哈夫曼树确定每个字符的0/1代码code
+//锟斤拷锟捷癸拷锟斤拷锟斤拷锟斤拷确锟斤拷每锟斤拷锟街凤拷锟斤拷0/1锟斤拷锟斤拷code
 
 
 
 void codenum(HafumanCode HC,char*str)
 {
     int i,j;
-    FILE*fp;//声明一个文件夹指针
-    fp=fopen("code.txt","w");//打开文件夹codefile
-    printf("密文为:\n");
-    while(*str)//字符串未结束时
+    FILE*fp;//锟斤拷锟斤拷一锟斤拷锟侥硷拷锟斤拷指锟斤拷
+    fp=fopen("code.txt","w");//锟斤拷锟斤拷锟侥硷拷锟斤拷codefile
+    printf("锟斤拷锟斤拷为:\n");
+    while(*str)//锟街凤拷锟斤拷未锟斤拷锟斤拷时
     {
         for(i=1;i<=num;i++)
         {
-            if(HC[i].ch==*str)//判断字符是否在Codenode中存在
+            if(HC[i].ch==*str)//锟叫讹拷锟街凤拷锟角凤拷锟斤拷Codenode锟叫达拷锟斤拷
             {
                 for(j=0;j<HC[i].len;j++)
-                    //将codenode中该字符的1、0代码存入文件夹
+                    //锟斤拷codenode锟叫革拷锟街凤拷锟斤拷1锟斤拷0锟斤拷锟斤拷锟斤拷锟斤拷锟侥硷拷锟斤拷
                 {
                     fputc(HC[i].bits[j],fp);
                 }
@@ -264,10 +265,10 @@ void codenum(HafumanCode HC,char*str)
                 break;
             }
         }
-        str++;//字符后移
+        str++;//锟街凤拷锟斤拷锟斤拷
     }
     printf("\n");
-    printf("编码写入一个文件--code.txt成功!!!");//提示写入文件成功
+    printf("锟斤拷锟斤拷写锟斤拷一锟斤拷锟侥硷拷--code.txt锟缴癸拷!!!");//锟斤拷示写锟斤拷锟侥硷拷锟缴癸拷
     printf("\n");
     fclose(fp);
 }
@@ -279,21 +280,21 @@ char*decode(HafumanCode HC)
     FILE*fp;
     char tempstr[9999];
     char*p;
-    static char cd[n+1];//char型数组用于存放从文件夹中读取的1、0代码
+    static char cd[n+1];//char锟斤拷锟斤拷锟斤拷锟斤拷锟节达拷锟脚达拷锟侥硷拷锟斤拷锟叫讹拷取锟斤拷1锟斤拷0锟斤拷锟斤拷
     int i,j,k=0,end;
     fp=fopen("code.txt","r");
 
-    while(!feof(fp))//当文件夹读取没有结束
+    while(!feof(fp))//锟斤拷锟侥硷拷锟叫讹拷取没锟叫斤拷锟斤拷
     {
-        end=0;//判断一个字符是否译码结束
+        end=0;//锟叫讹拷一锟斤拷锟街凤拷锟角凤拷锟斤拷锟斤拷锟斤拷锟斤拷
         for(i=0;(i<num)&&(end==0)&&(!feof(fp));i++)
-            //当一个字符未译完且文件未读取结束
+            //锟斤拷一锟斤拷锟街凤拷未锟斤拷锟斤拷锟斤拷锟侥硷拷未锟斤拷取锟斤拷锟斤拷
         {
-            cd[i]=' ';cd[i+1]='\0';//cd[]赋成空格
-            cd[i]=fgetc(fp);//读取文件夹中的一个字符
+            cd[i]=' ';cd[i+1]='\0';//cd[]锟斤拷锟缴空革拷
+            cd[i]=fgetc(fp);//锟斤拷取锟侥硷拷锟斤拷锟叫碉拷一锟斤拷锟街凤拷
             for(j=1;j<=num;j++)
             {
-                if(strcmp(HC[j].bits,cd)==0)//看cd[]的字符串是否等于Codenode中的某个密文
+                if(strcmp(HC[j].bits,cd)==0)//锟斤拷cd[]锟斤拷锟街凤拷锟斤拷锟角凤拷锟斤拷锟斤拷Codenode锟叫碉拷某锟斤拷锟斤拷锟斤拷
                 {
                     tempstr[k]=HC[j].ch;
                     end=1;
@@ -303,7 +304,7 @@ char*decode(HafumanCode HC)
                 }
 
             }
-            //将译出的字符赋给临时字符串tempstr[],标记一个字符译码结束jsjs赋1，跳出循环
+            //锟斤拷锟斤拷锟斤拷锟斤拷锟街凤拷锟斤拷锟斤拷锟斤拷时锟街凤拷锟斤拷tempstr[],锟斤拷锟斤拷一锟斤拷锟街凤拷锟斤拷锟斤拷锟斤拷锟斤拷jsjs锟斤拷1锟斤拷锟斤拷锟斤拷循锟斤拷
 
         }
     }
@@ -311,7 +312,7 @@ char*decode(HafumanCode HC)
 
 
     printf("\n");
-    tempstr[k]='\0';//赋给临时字符串一个结束符
-    p=tempstr;//char型指针指向临时字符串
+    tempstr[k]='\0';//锟斤拷锟斤拷锟斤拷时锟街凤拷锟斤拷一锟斤拷锟斤拷锟斤拷锟斤拷
+    p=tempstr;//char锟斤拷指锟斤拷指锟斤拷锟斤拷时锟街凤拷锟斤拷
     return p;
 }
